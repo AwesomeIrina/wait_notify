@@ -8,7 +8,7 @@ int main()
     barrier_synch barrier;
     for(int i =0; i<10; i++){
         threads[i] = std::thread([&](){
-            barrier.func1();
+            std::this_thread::sleep_for(std::chrono::seconds(1));
             barrier.wait();
         });
     }
