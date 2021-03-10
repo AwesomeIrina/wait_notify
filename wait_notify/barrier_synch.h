@@ -8,15 +8,14 @@
 class barrier_synch
 {
 private:
-   bool ready;
-   int threadsCounter;
    int threadsNum;
+   int threadsCounter;
    std::condition_variable cv;
    std::mutex mtx;
 public:
     barrier_synch();
     void wait();
-    void notify();
+    void func1();
 };
 
 #endif // BARRIER_SYNCH_H
